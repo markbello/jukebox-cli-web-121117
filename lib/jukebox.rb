@@ -58,8 +58,8 @@ def run(songs)
       when "play"
         play(songs)
       when "exit"
-        exit_jukebox
         running = false
     end
   end
+  exit_jukebox
 end
