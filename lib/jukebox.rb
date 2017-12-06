@@ -45,11 +45,11 @@ def exit_jukebox
 end
 
 def run(songs)
-  help
-  puts "Please enter a command:"
-  res = gets.chomp
   running = true
   while running
+    help
+    puts "Please enter a command:"
+    res = gets.chomp
     case res
       when "help"
         help
