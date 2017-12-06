@@ -24,7 +24,7 @@ def play(songs)
   puts "Please enter a song name or number:"
   res = gets.chomp
   binding.pry
-  if res <= songs.count
+  if res.to_i <= songs.count && res.to_i > 0
     i = res - 1
     song = songs[i]
     puts "Playing #{song}"
