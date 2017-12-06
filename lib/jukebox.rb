@@ -25,7 +25,7 @@ def play(songs)
   res = gets.chomp
   binding.pry
   if res.to_i <= songs.count && res.to_i > 0
-    i = res - 1
+    i = res.to_i - 1
     song = songs[i]
     puts "Playing #{song}"
   elsif songs.include?(res)
