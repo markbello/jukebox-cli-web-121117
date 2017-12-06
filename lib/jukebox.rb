@@ -23,8 +23,7 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   res = gets.chomp
-  binding.pry
-  if res.to_i <= songs.count
+  if res.to_i <= songs.count && res.to_i > 0
     i = res.to_i - 1
     song = songs[i]
     puts "Playing #{song}"
@@ -34,4 +33,32 @@ def play(songs)
   else
     puts "Invalid input, please try again"
   end
+end
+
+def list(songs)
+  songs.each {|song| puts song}
+end
+
+def exit_jukebox
+  puts "Goodbye"
+end
+
+def run(songs)
+  running = true
+  while running
+    help
+    puts "Please enter a command:"
+    res = gets.chomp
+    case res
+      when "help"
+        help
+      when "list"
+        list(songs)
+      when "play"
+        play(songs)
+      when "exit"
+        running = false
+    end
+  end
+  exit_jukebox
 end
