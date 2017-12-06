@@ -44,7 +44,7 @@ def play(my_songs)
     path = my_songs[res].delete("< path to this directory >").prepend("/home/markbello/jukebox-cli-web-121117")
     command = "open #{path}"
     puts command
-    system command
+    system "open #{path}"
   else
     puts "Invalid input, please try again"
   end
