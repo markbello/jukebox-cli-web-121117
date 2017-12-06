@@ -39,3 +39,7 @@ end
 def list(songs)
   songs.each {|song| puts song}
 end
+
+def exit_jukebox
+  puts "Goodbye"
+end
